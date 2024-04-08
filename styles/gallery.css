@@ -1,0 +1,44 @@
+
+/* Specific styling for gallery page*/
+
+:root{
+    --border-rounding: 20px
+}
+.slider-wrapper {
+    position: relative;
+    max-width:48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 2/1;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem var(--colour-5);
+    border-radius: var(--border-rounding)
+}
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 2rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width:2rem;
+    height:2rem;
+    border-radius: 50%;
+    background-color: var(--colour-4);
+    opacity: 0.25;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+    opacity:0.5
+}

@@ -1,0 +1,70 @@
+
+/* General styling for login and register pages*/
+
+
+label{
+  font-size: 20px;
+}
+
+#form{
+  background-color: var(--colour-5);
+  width:700px;
+  height: 450px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  box-shadow: 10px 10px 10px var(--colour-6);
+  border-radius: var(--border-rounding-gen);
+}
+
+#btn{
+  color: var(--colour-4);
+  background-color: var(--colour-1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: var(--border-rounding-gen);
+  font-size: large;
+}
+
+#btn2{
+  color: var(--colour-4);
+  background-color: var(--colour-6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: var(--border-rounding-gen);
+  font-size: large;
+}
+
+.horizontal-section-container{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.horizontal-section{
+  background-color: var(--colour-5);
+  display: flex;
+  justify-content: center;
+  width: 32%;
+  box-shadow: 10px 10px 10px var(--colour-6);
+  border-radius: var(--border-rounding-gen);
+}
+
+.validation-div{
+  
+  font-family: monospace;
+  text-decoration:solid;
+  color: rgba(224, 27, 27, 1);
+}
+
+.input{
+padding: 5px 5px 5px 5px;
+}

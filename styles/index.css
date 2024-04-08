@@ -1,0 +1,64 @@
+/* Specific styling for index page*/
+
+.title {
+    background: var(--colour-6);
+    border: transparent 3px;
+    border-radius: var(--border-rounding-gen);
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;       /*just top padding*/
+    padding-right: 10px;    /*just right padding*/
+    padding-bottom: 10px;   /*just bottom padding*/
+    padding-left: 10px;     /*just left padding*/
+    border-radius: var(--border-rounding-gen);
+}
+
+.button {
+    font-size: large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-color: var(--colour-4);
+    border-width: 2px;
+    background-color: var(--colour-1);
+    border-radius: var(--border-rounding-gen);
+
+    height: 40px;
+    width:100px;
+
+    cursor: pointer;
+}
+
+.horizontal-section-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.horizontal-section{
+    background-color: var(--colour-5);
+    display: flex;
+    justify-content: center;
+    flex-grow:1;
+    margin: var(--margin-gen);
+    box-shadow: 10px 10px 10px var(--colour-6);
+    border-radius: var(--border-rounding-gen);
+}
+.raise {
+    --hover: var(--colour-6);
+  }
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.7em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+.side-padded{
+    padding-left:10px;
+    padding-right:10px;
+}

@@ -1,0 +1,112 @@
+
+/* Styling for the header */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+.total-nav-wrapper{
+    margin: var(--margin-gen);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border: 2px solid transparent;
+}
+
+.nav-body-div{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.fifth{
+    width: 20%;
+}
+
+.logo-div {
+    border-radius: var(--border-rounding-big);
+    border: 2px solid transparent;
+}
+
+.logo-div:hover {
+        border: 2px solid var(--colour-6);
+}
+
+.horizontal-section-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.horizontal-section{
+    justify-content: center;
+    background-color: var(--colour-5);
+    display: flex;
+    width: 32%;
+    box-shadow: 10px 10px 10px var(--colour-6);
+    border-radius: var(--border-rounding-gen);
+}
+.profile-icon, .back-icon{
+    border-radius: 50%;
+}
+.profile-icon:hover,.back-icon:hover{
+    background-color: var(--colour-6);
+}
+.top-nav{
+    display:flex;
+    justify-content: space-between;
+}
+.divider{
+  font-size: 40px;
+  cursor:pointer; 
+}
+
+/* animation and grouping*/
+
+.navigation-button {
+    letter-spacing: 0;
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    font-family:monospace;
+  }
+  .navigation-button:after {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+.nav-group:hover > .nav-text > .navigation-button,
+.nav-group:active > .nav-text > .navigation-button{
+  letter-spacing: 5px;
+  text-decoration: none;
+}
+.nav-group:hover > .nav-text > .navigation-button:after{
+  -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-color: #000000;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+.nav-text{
+  display: flex;
+  justify-content: center;
+  color: transparent;
+}
+.normal{
+  text-decoration: none;
+}

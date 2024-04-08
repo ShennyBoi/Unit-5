@@ -1,0 +1,106 @@
+
+/* General styling for all pages */
+
+:root {
+    /*old palate*/            /* replace with:*/
+    --colour-1: #119DA4;    /* blue-munsell*/
+    --colour-2: #0C7489;    /* remove */
+    --colour-3: #39a2b4;    /* remove */
+    --colour-4: #040404;    /* black */
+    --colour-5: #D7D9CE;    /* off-white */
+    --colour-6: #888888;    /* onyx */
+    --colour-7: #f1f3e5;
+    --colour-8: #e9e9dc;
+    
+    --border-rounding-gen: 6px;
+    --border-rounding-big: 12px;
+    --margin-gen: 1%;
+    --margin-big: 5%;
+
+    /*new -palate*/
+    --onyx: #393d3fff;
+    --white: #fdfdffff;
+    --silver: #c6c5b9ff;
+    --blue-munsell: #62929eff;
+    --paynes-gray: #546a7bff;
+}
+
+body {
+    background-color: var(--colour-5);
+    margin: 0;
+    background-image: url("../assets/AbstractBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+.total-body-wrapper{
+height:auto;
+}
+
+.body-heading-div{
+    display:flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.body-content-div{
+    display:flex;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.left-div {
+    display: flex;
+    justify-content: left;
+}
+
+.right-div{
+    display: flex;
+    justify-content: right;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mono{
+    font-family: monospace;
+}
+
+.grow{
+    display:flex;
+    flex-grow: 1;
+}
+
+.vertically-centered{
+    display: flex;
+    align-items: center;
+}
+
+.third{
+    width:33%;
+  }
+
+.margin{
+  margin:var(--margin-gen);
+}
