@@ -118,8 +118,13 @@ include_once "./includes/nav.php";      # Includes nav bar
 //                    }       //  currently redundant
     
     //  POST OVERRIDES
-    //  If POST variables are set, they will override their corresponding search/sort/filter and update the session variables
-    
+
+    if (!isset($_SESSION["filter-by-price"])){
+        $_SESSION["filter-by-price"] = FALSE;
+    }
+
+    //  If POST variables are set, they will override their corresponding search/sort/filter and update the session variables 
+
     if ($_SERVER['REQUEST_METHOD'] == "POST") {             //  If method is post from a form (looking for any search, sorts, or filters)
     
         if (isset($_POST["search-term"])) {                 //  If SEARCH term is set in the post e.g. the post was from a SEARCH
