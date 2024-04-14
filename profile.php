@@ -40,7 +40,7 @@ include_once "./includes/nav.php";
             <div class="horizontal-section-container">
                 <div class="horizontal-section">
                     <div class="column">
-                        <h1> Your Details </h1>
+                        <h1> Your Details </h1> <!-- if user is logged in, display their details -->
                         <?php if (isset($_SESSION["firstName"])) { ?>
                             <ul>
                                 <li>UserID:
@@ -69,7 +69,7 @@ include_once "./includes/nav.php";
                     <div class="column">
                         <h1>
                             <?php
-                            if (isset($_SESSION["firstName"])) {
+                            if (isset($_SESSION["firstName"])) {  // If user is logged in, welcome them
                                 echo ("Welcome, " . $_SESSION["firstName"] . "!");
                             } else {
                                 echo ("Welcome, Guest user.");
@@ -77,7 +77,7 @@ include_once "./includes/nav.php";
                             ?>
                         </h1>
                         <?php
-                        if (!isset($_SESSION["firstName"])):
+                        if (!isset($_SESSION["firstName"])):    //  If user is not logged in, tell them to login
                             ?>
                             Please login or create an account to view more information!
                         <?php endif; ?>
@@ -89,7 +89,7 @@ include_once "./includes/nav.php";
                             <h1> Functionality </h1>
                         </div>
                         <div class="center-div">
-                            <?php if (isset($_SESSION["firstName"])) { ?>
+                            <?php if (isset($_SESSION["firstName"])) { //If user logged in, display logout and delete account buttons ?>
                                 <div class="row">
                                     <div class="side-padded">
                                         <a href="./includes/logoutAct.php">
@@ -119,7 +119,7 @@ include_once "./includes/nav.php";
                                     </div>
                                     <!-- POPUP END   -->
                                 </div>
-                            <?php } else { ?>
+                            <?php } else { //  If user not logged in, display login and register buttons    ?>
                                 <div class="row">
                                     <div class="side-padded">
                                         <a href="login.php">
