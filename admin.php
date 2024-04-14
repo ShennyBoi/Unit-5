@@ -74,10 +74,17 @@ include_once "./includes/nav.php";
 
             <table>
                 <tr>
-                <?php $getColumnNamesQuery = "SELECT column_name FROM information_schema.columns WHERE table_schema = 'mathartdb' AND table_name = '$tableTitle';";
+                <?php 
+                // Gets column names
+                $getColumnNamesQuery = "SELECT column_name FROM information_schema.columns WHERE table_schema = 'mathartdb' AND table_name = '$tableTitle';";
                 $columnNames = mysqli_query($conn, $getColumnNamesQuery);
+
+                //  Makes table header from each column title
                 foreach ($columnNames as $columnTitle) {
-                $columnTitle = $columnTitle["column_name"]; ?>
+                $columnTitle = $columnTitle["column_name"]; 
+                
+                
+                ?>
                     <th> 
                         <?php echo ($columnTitle); ?> 
                     </th>
@@ -85,9 +92,11 @@ include_once "./includes/nav.php";
                 </tr>
 
                 <?php
+
+                //  Gets data from corresponding table
                 $dataQuery = "SELECT * FROM $tableTitle";
                 $result = mysqli_query($conn, $dataQuery);
-                if (($result->num_rows) > 0) {
+                if (($result->num_rows) > 0) { //   If there is some data, displays that
                     while ($recordArr = mysqli_fetch_assoc($result)) {
                         ?>
                         <tr>
@@ -100,7 +109,7 @@ include_once "./includes/nav.php";
                             <?php } ?>
                         </tr>
                     <?php }
-                } else {
+                } else {    //  If not, informs the user that there are 0 results
                     ?> 
                     <tr> 
                         <?php echo "0 results"; ?> 
