@@ -35,8 +35,6 @@ include_once "./includes/nav.php";      # Includes nav bar
     if (!isset($_SESSION["shop-search-term"])){
         $_SESSION["shop-search-term"] = "";
     }
-
-    //  <For ease of finding> SEARCH QUERIES SEARCH QUERY SEARCH TERM
     
     //  1ST STEP IN PRODUCT DISCOVERY FUNCTIONS
     
@@ -88,6 +86,7 @@ include_once "./includes/nav.php";      # Includes nav bar
     //  If field is colour, term may be any colour, tail will be BLANK. -- e.g. WHERE COLOUR == "BLUE"
     //  If field is date, term may be: any date, tail may be: before/after -- e.g. WHERE DATE > or < 10
     //  If field is type, term may be any type (e.g.impossible shape, optical illusion, etc.), tail will be BLANK -- e.g. where type == "OPTICAL ILLUSION"
+
     function filterPriceQuery($value, $tail)     //  Function to turn posted PRICE filter terms into appendable sql query end
     {
         $price_filter_query = " AND productCost ";                      //  Beginning of the filter by price query including price field reference
@@ -119,10 +118,7 @@ include_once "./includes/nav.php";      # Includes nav bar
         $sqlSort = $_SESSION["shop-sort-term"];         //  Gets old sort term from session data  
     }
 
-    //  Filters are not stored in a single session variable... 
-//                    if (isset($_SESSION["shop-filter-term"])) {    //  If there is one...
-//                        $sqlfilter = $_SESSION["shop-filter-term"];    //  Gets old filter term from session data  
-//                    }       //  currently redundant
+    //  Filters are not stored in a single session variable, so are caught slightly differenty
     
     //  POST OVERRIDES
 
@@ -184,24 +180,10 @@ include_once "./includes/nav.php";      # Includes nav bar
             $price_filter_query = $_POST["stock-filter-value"];
             $price_filter_query = "";
 
-        }
-
-        //  $sqlFilterAppend = $price_filter_query;
-    
-        //  $_POST["filter-price-tail"];
-    
-
-
-
+        } 
 
     } ?>
-
-
-
-
-
-
-
+    
     <?php
 
     //  If user is logged in 
@@ -949,9 +931,6 @@ include_once "./includes/nav.php";      # Includes nav bar
                     
                     $sqlSelectProducts = ("SELECT * FROM products " . $sqlSearchAppend . $sqlFilterAppend . $sqlSortAppend);
 
-                    // TESTING: 
-                    // echo $sqlSelectProducts;
-
                     $result = mysqli_query($conn, $sqlSelectProducts);
                     if (mysqli_num_rows($result) == 0) {
                         echo ("No items found<br>");
@@ -1035,10 +1014,7 @@ include_once "./includes/nav.php";      # Includes nav bar
                                                 <input type="hidden" name="cost-Add" value="<?php echo ($cost) ?>">
 
                                                 <input type="submit" class="add-to-basket raise" value="Add To Basket">
-                                                <!--
-                                            <img class="button-icon" src="./assets/Basket.png" width="30px" height="30px" />
-                                            
-                                            <input type="number" min="0" max="10" step="1" value="6" size="6">-->
+                                                
                                             </form>
 
                                             <form action="./includes/shop-includes/buy-now.php" method=POST>
@@ -1046,12 +1022,7 @@ include_once "./includes/nav.php";      # Includes nav bar
                                                 <input type="hidden" name="cost-Buy" value="<?php echo ($cost) ?>">
 
                                                 <input type="submit" class="buy-now raise" value="Buy Now">
-                                                <!--
-                                            <img class="button-icon" src="./assets/Clicker.png" width="30px"
-                                                height="30px" />
-                                            
-                                            <input type="number" min="0" max="10" step="1" value="6" size="6">
-                                            -->
+                                                
                                             </form>
                                         </div>
                                     </div>
