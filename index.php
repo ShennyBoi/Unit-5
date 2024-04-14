@@ -54,13 +54,18 @@ include_once "./includes/nav.php";
         </div>
         <div class="horizontal-section-container">
             <div class="horizontal-section">
-                <div>
-                    image slider
+                <div class="column grow center-div">
+                    <div class="subtitle center-div">
+                        <h2>Information</h2>
+                    </div>
+                    <div class="center-div text-div">
+                        Welcome to mathart, have a look around! <br><br>
+                    </div>
                 </div>
             </div>
             <div class="horizontal-section">
                 <div class="subtitle">
-                    <h2>Information</h2>
+                    <h2>About us</h2>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ include_once "./includes/nav.php";
     <title>Book a viewing</title>
 
     <link rel="stylesheet" href="./styles/all.css" type="text/css">
-    <link rel="stylesheet" href="./styles/booking2.css" type="text/css">
+    <link rel="stylesheet" href="./styles/booking.css" type="text/css">
 
 </head>
 

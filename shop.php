@@ -29,6 +29,13 @@ include_once "./includes/nav.php";      # Includes nav bar
 
     <?php
 
+    if (!isset($_SESSION["filter-by-price"])){
+        $_SESSION["filter-by-price"] = FALSE;
+    }
+    if (!isset($_SESSION["shop-search-term"])){
+        $_SESSION["shop-search-term"] = "";
+    }
+
     //  <For ease of finding> SEARCH QUERIES SEARCH QUERY SEARCH TERM
     
     //  1ST STEP IN PRODUCT DISCOVERY FUNCTIONS
@@ -118,10 +125,6 @@ include_once "./includes/nav.php";      # Includes nav bar
 //                    }       //  currently redundant
     
     //  POST OVERRIDES
-
-    if (!isset($_SESSION["filter-by-price"])){
-        $_SESSION["filter-by-price"] = FALSE;
-    }
 
     //  If POST variables are set, they will override their corresponding search/sort/filter and update the session variables 
 
@@ -646,7 +649,12 @@ include_once "./includes/nav.php";      # Includes nav bar
                             echo ("Cost: " . $productCost . "<br>");
                             echo ("In stock: " . $stock . "<br>");
                             ?>
-
+                            <form method=POST>
+                                <input type = hidden> <!-- post the id on click-->
+                            </form>
+                            <?php 
+                            
+                            ?>
                             <hr>
 
                             <?php
@@ -942,7 +950,7 @@ include_once "./includes/nav.php";      # Includes nav bar
                     $sqlSelectProducts = ("SELECT * FROM products " . $sqlSearchAppend . $sqlFilterAppend . $sqlSortAppend);
 
                     // TESTING: 
-                    echo $sqlSelectProducts;
+                    // echo $sqlSelectProducts;
 
                     $result = mysqli_query($conn, $sqlSelectProducts);
                     if (mysqli_num_rows($result) == 0) {

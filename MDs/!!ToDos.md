@@ -17,8 +17,8 @@ Read this document briefly at the start of every coding session!
 #### To-do overview
 
 [ ] Profile: Delete account button <br>
-[ ] Shop: Shopping basket <br>
-[ ] Shop: Sort, Filter, Search, functions <br>
+[X] Shop: Shopping basket <br>
+[X] Shop: Sort, Filter, Search, functions <br>
 [ ] Admin: Edit & Delete functions <br>
 [ ] Bookings: Calendar Booking functions <br>
 

@@ -1,96 +1,131 @@
-
-/* Specific styling for courses page*/
-
-.horizontal-section-container{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.horizontal-section{
-    background-color: var(--colour-5);
-    display: flex;
-    justify-content: center;
-    width: 32%;
-    box-shadow: 10px 10px 10px var(--colour-6);
-    border-radius: var(--border-rounding-gen);
-}
-table, th, td{
-    border: 0px solid; 
-    border-color: var(--colour-6);
-    border-collapse: collapse;
-}
-table{
-    border: 2px solid;
-}
-th{
-    border-bottom: 2px solid;
-    }
-
-.text-grey{
-    color: var(--colour-6);
-}
-.text-focus{
-    color: rgb(0 0 256);
-    text-decoration: underline;
-}
-#btn{
-    display: flex;
-    flex-grow: 1;
-    align-items: stretch;
-    height: 100%;
-
-    color: var(--colour-4);
-    background-color: var(--colour-6);
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: var(--border-rounding-gen);
-    font-size: large;
-}
-.btnL{
-    margin-left:10px;
-}
-.btnR{
-    margin-right:10px;
-}
-.shift-left:hover,
-.shift-left:focus {
-  box-shadow: 0.5em 0 0.5em -0.4em var(--colour-6);
-  transform: translateX(-0.2em);
-}
-.shift-right:hover,
-.shift-right:focus {
-  box-shadow: -0.5em 0 0.5em -0.4em var(--colour-6);
-  transform: translateX(0.2em);
-}
-
-.full-width{
-    display:flex;
-    flex-grow:1;
-}
-
-.calendar-table{
-    background-color: transparent;
-    border-collapse: collapse;
+/*******************************Calendar Top Navigation*********************************/
+div#calendar{
+    margin:0px auto;
+    padding:0px;
     width: 100%;
-    text-align:center;
-}
+    font-family:Helvetica, "Times New Roman", Times, serif;
+  }
+   
+  div#calendar div.box{
+      position:relative;
+      top:0px;
+      left:0px;
+      width:100%;
+      height:40px;
+      background-color:   #787878 ;      
+  }
+   
+  div#calendar div.header{
+      line-height:40px;  
+      vertical-align:middle;
+      position:absolute;
+      left:11px;
+      top:0px;
+      width:90%;
+      height:40px;   
+      text-align:center;
+  }
+   
+  div#calendar div.header a.prev,div#calendar div.header a.next{ 
+      position:absolute;
+      top:0px;   
+      height: 17px;
+      display:block;
+      cursor:pointer;
+      text-decoration:none;
+      color:#FFF;
+  }
+   
+  div#calendar div.header span.title{
+      color:#FFF;
+      font-size:18px;
+  }
+   
+   
+  div#calendar div.header a.prev{
+      left:0px;
+  }
+   
+  div#calendar div.header a.next{
+      right:0px;
+  }
+   
+   
+   
+   
+  /*******************************Calendar Content Cells*********************************/
+  div#calendar div.box-content{
+      border:1px solid #787878 ;
+      border-top:none;
+  }
+   
+   
+   
+  div#calendar ul.label{
+      float:left;
+      margin: 0px;
+      padding: 0px;
+      margin-top:5px;
+      margin-left: 5px;
+  }
+   
+  div#calendar ul.label li{
+      margin:0px;
+      padding:0px;
+      margin-right:5px;  
+      float:left;
+      list-style-type:none;
+      width:40px;
+      height:30px;
+      line-height:40px;
+      vertical-align:middle;
+      text-align:center;
+      color:#000;
+      font-size: 15px;
+      background-color: transparent;
+  }
+   
+   
+  div#calendar ul.dates{
+      float:left;
+      margin: 0px;
+      padding: 0px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+  }
+   
+  /** overall width = width+padding-right**/
+  div#calendar ul.dates li{
+      margin:0px;
+      padding:0px;
+      margin-right:5px;
+      margin-top: 5px;
+      line-height:40px;
+      vertical-align:middle;
+      float:left;
+      list-style-type:none;
+      width:40px;
+      height:40px;
+      font-size:25px;
+      background-color: #DDD;
+      color:#000;
+      text-align:center; 
+  }
+   
+  :focus{
+      outline:none;
+  }
+   
+  div.clear{
+      clear:both;
+  }     
+  .calendar{
+    width:322px;
+  }
 
-.day-button{
-    background-color: var(--white);
-    cursor: pointer;
-}
-
-.day-button:hover{
-    background-color:var(--silver);
-    transition:0ms;
-}
-
-.unclickable{
-    cursor:not-allowed;
-}
-
-.calendar-heading{
-    background-color: var(--colour-3);
-}
+  .today{ /*  override the default calendar date colouring to display today's date*/
+    color: blue !important;
+  }
+  .event{
+    color: orange !important;
+  }

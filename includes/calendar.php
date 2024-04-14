@@ -126,9 +126,35 @@ class Calendar
             $cellContent = null;
         }
 
+        if ($cellContent != null){
+        
+            $sqlFindDates = "SELECT bookingID FROM bookings WHERE bookingDate = '".$this->currentDate."' ";
+            
+            $serverName = "localhost";  # Server Name
+            $dbUsername = "root";       # Database Username
+            $dbPassword = "root";       # Database Password
+            $dbName = "mathartdb";      # Database Name
+            
+            $conn = new mysqli($serverName, $dbUsername, $dbPassword, $dbName); 
+            
+            $datesResult = mysqli_query($conn, $sqlFindDates);
+            if (mysqli_num_rows($datesResult) > 0) {
+                $eventToday = TRUE;
+            } else {
+                $eventToday = FALSE;
+            }
+        } else {
+            $eventToday = FALSE;
+        }
+        
 
-        return '<li id="li-' . $this->currentDate . '" class="' . ($cellNumber % 7 == 1 ? ' start ' : ($cellNumber % 7 == 0 ? ' end ' : ' ')) .
-            ($cellContent == null ? 'mask' : '') . '">' . $cellContent . '</li>';
+        return '<li id="li-' .
+                $this->currentDate .
+                '" class= "' . 
+                ($cellNumber % 7 == 1 ? ' start ' : ($cellNumber % 7 == 0 ? ' end ' : ' ')) .
+                ($this->currentDate == date("Y-m-d")   ? ' today ' :' ') .
+                ($eventToday == TRUE   ? ' event ' :' ') .
+                ($cellContent == null ? 'mask' : '') . '">' . $cellContent . '</li>';
     }
 
     /**
