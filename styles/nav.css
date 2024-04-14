@@ -90,8 +90,10 @@
     transition: all 280ms ease-in-out;
     width: 0;
   }
+  
+  /* parent element reference for overlapping nav animation */
 .nav-group:hover > .nav-text > .navigation-button,
-.nav-group:active > .nav-text > .navigation-button{
+.nav-group:active > .nav-text > .navigation-button{ 
   letter-spacing: 5px;
   text-decoration: none;
 }
