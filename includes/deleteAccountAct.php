@@ -16,14 +16,7 @@ if($id==1){
 
         $sql="DELETE FROM useraccounts WHERE userID=$id";
         $result=mysqli_query($conn,$sql);
-        /*if($result){
-        echo'<script> 
-            window.location.href = "../index.php";
-            alert("success")</script>';
-        } else {
-        $_SESSION["deleteAccountErr"]="unknown error";
-        header("location: ../profile.php")
-        }*/
+
         session_destroy();
     } else {
         $_SESSION["deleteAccountErr"]="username did not match";
