@@ -1,11 +1,10 @@
-# Unit5
+# SEAN LAY - Unit5 project: programmed solution to a problem
 
-<h1>SEAN UNIT 5 PROJECT</h1>
+## attributes
 
-<h2>attributes</h2>
 
 Images by <a href="https://www.freepik.com/free-vector/realistic-polygonal-background_13223084.htm#query=geometric%20background&position=3&from_view=keyword&track=ais">Freepik</a>
 
+Calendar base code by <a href="https://www.geeksforgeeks.org/how-to-create-a-dynamic-calendar-in-html-css-javascript/">Geeks for geeks</a>
 
-
-Calendar code by <a href="https://www.youtube.com/@codeode6622">
+Other than snippets from the above calendar, all code was created and written by me. 
