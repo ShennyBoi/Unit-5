@@ -127,5 +127,8 @@ div#calendar{
     color: blue !important;
   }
   .event{
-    color: orange !important;
+    color: darkorange !important;
+  }
+  .key-text{
+    font-size:20px;
   }

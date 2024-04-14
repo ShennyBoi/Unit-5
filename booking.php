@@ -27,7 +27,15 @@ include_once "./includes/nav.php";
 
     <div class="horizontal-section-container">
         <div class="horizontal-section">
-            <h1> Upcoming Events </h1>
+            <div class=column>
+            <h1 > Upcoming Events </h1>
+            <br>
+            <h2 class=mono> Calendar Key </h2>
+            <ul>
+                <li class="today mono key-text">Todays date</li>
+                <li class="event mono key-text">Upcoming events</li>
+            </ul>
+            </div>
         </div>
 
         <div class="horizontal-section">

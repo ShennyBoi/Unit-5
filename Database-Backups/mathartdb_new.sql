@@ -38,7 +38,9 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`bookingID`, `userID`, `bookingDate`, `numberOfGuests`) VALUES
-(1, 1, '2024-02-12', 2);
+(1, 1, '2024-02-12', 2),
+(1, 1, '2024-04-25', 3),
+(1, 1, '2024-05-10', 4);
 
 -- --------------------------------------------------------
 

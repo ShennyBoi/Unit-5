@@ -64,8 +64,22 @@ include_once "./includes/nav.php";
                 </div>
             </div>
             <div class="horizontal-section">
-                <div class="subtitle">
-                    <h2>About us</h2>
+                <div class="column">
+                    <div class="subtitle">
+                        <h2>About us</h2>
+                    </div>
+                    <div class="center-div grow">
+                        <div class=column >
+                            <h3> Get in Contact </h3>
+                            <ul>
+                                <li>Instagram: MathArtIG-UK</li>
+                                <li>YouTube: MathArtYT </li>
+                                <li>Twitter/X: MathArtX-UK </li>
+                                <li>Email us: CustomerService@Mathart.com</li>
+                                <li>Call our gallery: (+44) 07877 112 344</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
