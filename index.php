@@ -36,7 +36,9 @@ include_once "./includes/nav.php";
             <h1 class="text">Welcome To MathArt!</h1>
         </div>
         <div class="center-div">
-            <?php if (!isset($_SESSION["firstName"])): ?>
+            <?php 
+            // If user is not logged in, display log in and register buttons
+            if (!isset($_SESSION["firstName"])): ?>
                 <div class="button-div">
                     <div class=side-padded>
                         <a href="login.php"><button class="button mono raise">Login</button></a>
@@ -46,7 +48,8 @@ include_once "./includes/nav.php";
                     </div>
                 </div>
             <?php endif; ?>
-            <?php if (isset($_SESSION["firstName"])): ?>
+            <?php //If user is logged in, welcome them
+            if (isset($_SESSION["firstName"])): ?>
                 <h2>Welcome,
                     <?php echo $_SESSION['firstName']; ?>
                 </h2>
