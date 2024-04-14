@@ -28,9 +28,9 @@ include_once "./includes/nav.php";
     <div class="horizontal-section-container">
         <div class="horizontal-section">
             <div class=column>
-            <h1 > Upcoming Events </h1>
+            <h1 > Upcoming Events </h1> <!-- Section title -->
             <br>
-            <h2 class=mono> Calendar Key </h2>
+            <h2 class=mono> Calendar Key </h2> <!-- Key title -->
             <ul>
                 <li class="today mono key-text">Todays date</li>
                 <li class="event mono key-text">Upcoming events</li>
@@ -46,11 +46,11 @@ include_once "./includes/nav.php";
                 <div class="grow center-div">
                     <div class="calendar">
                         <?php
-                        include './includes/calendar.php';
+                        include './includes/calendar.php';  //  Includes calendar code
 
-                        $calendar = new Calendar();
+                        $calendar = new Calendar();     //  Sets calendar variable
 
-                        echo $calendar->show();
+                        echo $calendar->show();     //  Calls function to display calendar
                         ?>
                     </div>
                 </div>
@@ -58,7 +58,10 @@ include_once "./includes/nav.php";
         </div>
 
         <div class="horizontal-section">
-            <h1> Available Slots </h1>
+            <div class=column>
+                <h1> Available Slots </h1>  <!-- Section title -->
+                <p> Coming soon! </p>
+            </div>
         </div>
     </div>
 </body>
