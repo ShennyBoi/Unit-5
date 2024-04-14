@@ -110,16 +110,16 @@ include_once "./includes/nav.php";
                     <h3>Login to an existing account</h3>
                 </div>
 
-                <?php if (!($loginErr == "")) { ?>
+                <?php if (!($loginErr == "")) {  // If login error is set ?>
                     <div class="center-div mono">
                         <h4 class="validation-div">
-                            <?php echo ($loginErr) ?>
+                            <?php echo ($loginErr) //  Echo login error ?>
                         </h4>
                     </div>
                 <?php } ?>
 
             </div>
-
+                    <!-- Login form -->
             <form name="loginForm" id="loginForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                 method="POST">
                 <div class="column">
@@ -135,7 +135,7 @@ include_once "./includes/nav.php";
                         </div>
                         <div class="third right-div">
                             <div class="validation-div">
-                                <?php echo $usernameErr; ?>
+                                <?php echo $usernameErr; //  Echo login error  ?>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ include_once "./includes/nav.php";
                         </div>
                         <div class="third right-div">
                             <div class="validation-div">
-                                <?php echo $passwordErr; ?>
+                                <?php echo $passwordErr; //  Echo login error  ?>
                             </div>
                         </div>
                     </div>
